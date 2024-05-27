@@ -11,7 +11,31 @@ Has your stock out performed standard and poors500 over the last two years using
     stackoverflow
     https://tinyurl.com/bdz6u8fx
     https://stackoverflow.com/questions/32186233/r-calculating-a-stocks-beta-using-performanceanalytics-capm-beta-function-or
+    
+    Nice peer review by
+    Keintz, Mark
+    mkeintz@outlook.com
 
+    If I correctly understand the data being used, this program might
+    not tell whether a particular stock investment has done better (or worse) than the SP500.
+
+
+    Both ALTR and SPY issue dividends.
+    Two stocks with the same month-end price history would have equal performance only
+    if their dividends also matched.  But that data is apparently not being downloaded by R.
+
+    Less obvious, but more dramatic is the possibility of stock splits (or more rarely reverse-splits).
+    The stock symbol is unchanged, but the price being downloaded does not measure the same thing after
+    the split as before.  The data user would have to revise the quantity of their holdings (or make an
+    adjusted price) as of the split date to have a consistent monthly history of invest
+    ment value.   This is clearly an issue for single stocks.
+
+    I don't think it is for SPY, which is an exchange traded fund tracking the SP500.
+    The SP500 is based on "a free-float market capitalization-weighted methodology" of its
+    constituents.  Market cap is unchanged by a stock split.  Now, I suppose the folks
+    who manage SPY could do a split (thereby changing the SPY to SP500 ratio),
+    but why?  I can find no instance of SPY (or SPDR its predecessor)
+    executing a split since SPDR was introduced in Jan 1993.
     %stop_submission;
 
     We are using the month end adjusted close for 24 months from 2022-04-01 to 2024-03-01
