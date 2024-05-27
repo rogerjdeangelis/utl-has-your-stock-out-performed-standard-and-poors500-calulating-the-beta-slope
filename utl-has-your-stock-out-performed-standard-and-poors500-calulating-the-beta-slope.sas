@@ -2,7 +2,7 @@
 
 Has your stock out performed standard and poors 500 over the last two years using the financial beta index
 
-Nice peer reviee by
+Nice peer review by
 
 Keintz, Mark
 mkeintz@outlook.com
